@@ -30,6 +30,12 @@
   --pst-font-family-monospace: var(--pst-font-family-monospace-system);
 }
 
+html {
+  /* Offset href links for header.
+	 * See: https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/ */
+  scroll-padding-top: 4em;
+}
+
 code {
   color: var(--salmon);
   font-family: var(--pst-font-family-monospace);
