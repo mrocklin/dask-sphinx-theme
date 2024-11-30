@@ -9,10 +9,12 @@
   --blue: #1f5aff;
   --dark-blue: #183d72;
   --light-grey: #f6f6f6;
+  --darker-light-grey: #ebeaee;
   --grey: #33363d;
   --dark-grey: #262326;
   --black: #080815;
-  --green: #17955c;
+  --green: #61ba92;
+  --light-green: #61ba921b;
   --salmon: #fc6e6b;
   --red: #ef1161;
   --purple: #f61fff;
@@ -21,6 +23,14 @@
   --pst-color-link: var(--black);
   --pst-color-link-hover: var(--yellow);
   --pst-color-inline-code: var(--salmon);
+  /* rgb for blue */
+  --pst-color-admonition-note: 31, 90, 255;
+  /* rgb for red */
+  --pst-color-admonition-warning: 239, 17, 97;
+  --pst-color-admonition-important: 239, 17, 97;
+  /* rgb for yellow */
+  --pst-color-admonition-tip: 255, 193, 30;
+  --pst-color-admonition-hint: 255, 193, 30;
 
   /* Font Family */
   --pst-font-family-base-system: Inter;
@@ -284,3 +294,62 @@ ul.current.nav.bd-sidenav
 .fa-bars:before {
     content: url('../images/icon-menu.svg');
 } */
+
+main.bd-content #main-content dl.module:not(.docutils) dt,
+main.bd-content #main-content dl.class:not(.docutils) dt,
+main.bd-content #main-content dl.exception:not(.docutils) dt,
+main.bd-content #main-content dl.function:not(.docutils) dt,
+main.bd-content #main-content dl.decorator:not(.docutils) dt,
+main.bd-content #main-content dl.data:not(.docutils) dt,
+main.bd-content #main-content dl.method:not(.docutils) dt,
+main.bd-content #main-content dl.attribute:not(.docutils) dt,
+main.bd-content #print-main-content dl.module:not(.docutils) dt,
+main.bd-content #print-main-content dl.class:not(.docutils) dt,
+main.bd-content #print-main-content dl.exception:not(.docutils) dt,
+main.bd-content #print-main-content dl.function:not(.docutils) dt,
+main.bd-content #print-main-content dl.decorator:not(.docutils) dt,
+main.bd-content #print-main-content dl.data:not(.docutils) dt,
+main.bd-content #print-main-content dl.method:not(.docutils) dt,
+main.bd-content #print-main-content dl.attribute:not(.docutils) dt {
+  color: var(--dark-blue);
+  background: var(--darker-light-grey);
+  border-top: solid 3px var(--dark-blue);
+}
+
+main.bd-content #main-content dl.module:not(.docutils) dl dt,
+main.bd-content #main-content dl.class:not(.docutils) dl dt,
+main.bd-content #main-content dl.exception:not(.docutils) dl dt,
+main.bd-content #main-content dl.function:not(.docutils) dl dt,
+main.bd-content #main-content dl.decorator:not(.docutils) dl dt,
+main.bd-content #main-content dl.data:not(.docutils) dl dt,
+main.bd-content #main-content dl.method:not(.docutils) dl dt,
+main.bd-content #main-content dl.attribute:not(.docutils) dl dt,
+main.bd-content #print-main-content dl.module:not(.docutils) dl dt,
+main.bd-content #print-main-content dl.class:not(.docutils) dl dt,
+main.bd-content #print-main-content dl.exception:not(.docutils) dl dt,
+main.bd-content #print-main-content dl.function:not(.docutils) dl dt,
+main.bd-content #print-main-content dl.decorator:not(.docutils) dl dt,
+main.bd-content #print-main-content dl.data:not(.docutils) dl dt,
+main.bd-content #print-main-content dl.method:not(.docutils) dl dt,
+main.bd-content #print-main-content dl.attribute:not(.docutils) dl dt {
+  color: var(--dark-blue);
+  background: var(--darker-light-grey);
+  border-left: solid 3px var(--dark-blue);
+}
+
+/* includes references to Python data types, for example */
+div#api-reference dl.py.function a.reference.external {
+  color: var(--dark-blue);
+}
+
+.admonition.seealso .admonition-title:before {
+  color: var(--green);
+}
+
+.admonition.seealso {
+  border-color: var(--green);
+}
+
+.admonition.seealso .admonition-title {
+  background-color: var(--light-green);
+}
